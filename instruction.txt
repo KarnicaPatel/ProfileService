@@ -1,2 +1,23 @@
 Database Console 
 http://localhost:8009/h2/
+
+Base URI - http://localhost:8009
+1. Create User Profile
+    Method- POST
+    URI- /user/profile/
+
+2. Update User Profile
+    MEthod- PUT
+    URI-/user/profile
+
+3. Read USer profile 
+    MEthod- GET
+    a. By ID
+    URI- /user/profile/{userId}
+    b. By First name and last name
+    URI- /user/profile/{firstName}/{lastName}
+    
+4. Delete User Profile
+    Method- DELETE
+    URI- /user/profile/{}
+
