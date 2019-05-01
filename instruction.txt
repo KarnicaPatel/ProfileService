@@ -5,19 +5,23 @@ Base URI - http://localhost:8009
 1. Create User Profile
     Method- POST
     URI- /user/profile/
+    {"userName":"RaviPrakash","first_name":"Ravi","last_name":"Prakash","age":"20"}
 
 2. Update User Profile
     MEthod- PUT
     URI-/user/profile
+    Request Body- 
+    {"userName":"RaviPrakash","first_name":"Ravi","last_name":"Prakash","age":"20"}
 
 3. Read USer profile 
     MEthod- GET
     a. By ID
-    URI- /user/profile/{userId}
+    URI- /user/profile/{userId}, eg. /user/profile/10
     b. By First name and last name
-    URI- /user/profile/{firstName}/{lastName}
+    URI- /user/profile/{firstName}/{lastName}, eg. /user/profile/Ravi/Prakash
     
 4. Delete User Profile
     Method- DELETE
-    URI- /user/profile/{}
+    URI- /user/profile/{userId}
+
 
