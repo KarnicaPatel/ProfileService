@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 //for initializing resources or spring container
 @ComponentScan("com.example")
+//This is used to Enable autoconfiguration, register extra beans and used to exclude any autoconfiguration beans
 @SpringBootApplication(exclude = {org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration.class})
 
 public class DemoSpringApplication {
