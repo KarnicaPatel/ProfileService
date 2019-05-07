@@ -12,7 +12,7 @@ import com.example.demo.repo.UserProfileRepo;
 import com.example.demo.table.RequestParameters;
 import com.example.demo.table.UserProfile;
 
-//stereotype annotation helps to identify the service class
+//this is stereotype annotation helps to identify the service layer class
 @Service
 public class ProfileServiceImpl implements ProfileService{
 

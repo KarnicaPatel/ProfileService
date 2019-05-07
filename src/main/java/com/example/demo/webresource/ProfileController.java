@@ -25,10 +25,10 @@ public class ProfileController {
 
 	@Autowired
 	private ProfileServiceHelper profileServiceHelper;
-	//the @ResponseBody annotation tells to controller to serialized returned object into json and directly pass it as 
-	responsebody
+
 	
 	@RequestMapping(value ="/profile",method=RequestMethod.POST,consumes = "application/json")
+    //the  annotation tells to controller to serialized returned object into json and directly pass it as responsebody
 	@ResponseBody
 	public String createUserProfile(@RequestBody RequestParameters requestParameters){
 
@@ -52,6 +52,7 @@ public class ProfileController {
 
 	
 	@RequestMapping(value ="/profile/{userId}",method=RequestMethod.DELETE)
+    //@PathVariable used to bind the URI param to the method parameter, but uri key and pathvariable value must be same
 	public String deleteUserProfile(@PathVariable("userId")String userId){
 
 		String responseMessage=ProfileServiceConstants.UNEXPECTED_ERROR;

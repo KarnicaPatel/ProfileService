@@ -2,6 +2,7 @@ package com.example.demo.table;
 
 import org.springframework.stereotype.Component;
 
+//this class used to accept request data and return response
 @Component
 public class RequestParameters {
 	public String userName;

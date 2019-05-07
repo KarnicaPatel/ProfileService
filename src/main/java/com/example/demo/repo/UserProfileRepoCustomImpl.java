@@ -12,11 +12,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Repository
+//here we have implemented our custom database operation
+@Repository//sterotype annotation to mark this as database repo
 public class UserProfileRepoCustomImpl implements  UserProfileRepoCustom{
 
     @Autowired
-    private EntityManager entityManager;
+    private EntityManager entityManager; // this is the entitymanager which interact with database to perform operation
 
 
     @Override
@@ -24,6 +25,7 @@ public class UserProfileRepoCustomImpl implements  UserProfileRepoCustom{
 
         UserProfile userProfile=null;
         try{
+            //here creating the native query to execute on DB.
             Query query=entityManager.createNativeQuery(ProfileServiceConstants.QUERY);
             query.setParameter("firstName",firstName);
             query.setParameter("lastName",lastName);

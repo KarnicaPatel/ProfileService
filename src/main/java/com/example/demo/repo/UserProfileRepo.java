@@ -8,10 +8,12 @@ import com.example.demo.table.UserProfile;
 
 import java.lang.String;
 
-//it will mark spring components
+//it will  mark the interface as  spring components
 @Component
 //will tell spring to enable JPA Repositories
-@EnableJpaRepositories
+@EnableJpaRepositories // this will tell that this is the repository which is handling the database part
+//JpaRepository is a predefine interface which have boiler plate logic for CRUD operation
+//UserProfileRepoCustom this is custom interface which shows our custom operation on database
 public interface UserProfileRepo extends JpaRepository<UserProfile, Long>, UserProfileRepoCustom{
 
 

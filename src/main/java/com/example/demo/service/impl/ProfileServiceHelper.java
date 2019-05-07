@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 import com.example.demo.table.RequestParameters;
 import org.springframework.stereotype.Component;
 
+// this is a helper class used to validate the request body data
 @Component
 public class ProfileServiceHelper {
 //Validation part

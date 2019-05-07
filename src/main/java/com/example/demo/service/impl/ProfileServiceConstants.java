@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
+//This interface we have craeted to define our constants which will be used across the application
 public interface ProfileServiceConstants {
 	
 	public static String UNEXPECTED_ERROR="An Unexpected Error Occured";

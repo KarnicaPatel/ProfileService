@@ -18,14 +18,15 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.stereotype.Component;
 
 //all are JPA annotations
+//@Component will mark the class as Spring component
 @Component
-@Entity
-@Table(name="USER_PROFILE")
+@Entity // this marks class as database entity
+@Table(name="USER_PROFILE")//this provides the table name to hibernate and map this table to the entity.
 public class UserProfile {
 
 
-	@Column(name="SYS_CREATION_DATE", updatable = false)
-	@CreationTimestamp
+	@Column(name="SYS_CREATION_DATE", updatable = false) // used to bind attribute to column
+	@CreationTimestamp  // maps date to databse specific timestamp
 	private Date creationDate;
 
 
@@ -33,8 +34,8 @@ public class UserProfile {
 	@UpdateTimestamp
 	private Date updateDate;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id //for primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // to generate unique numbers which will used to assign as primary key
 	@Column(name="USER_PROFILE_ID")
 	private Long userProfileId;
 
