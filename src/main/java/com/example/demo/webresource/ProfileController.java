@@ -12,19 +12,22 @@ import com.example.demo.table.RequestParameters;
 import java.util.List;
 
 //this is the controller or resource class
+//This is used to mark a class as a rest resource, and spring component. 
 @RestController
 //use to provide the URI to resources
 @RequestMapping("/user")
 public class ProfileController {
 
 	/*it will help spring boot to identify the dependent class &
-	to inject the object of ProfileService class*/
+	to inject the object of ProfileServiceImpl class*/
 	@Autowired
 	private ProfileService profileService;
 
 	@Autowired
 	private ProfileServiceHelper profileServiceHelper;
-
+	//the @ResponseBody annotation tells to controller to serialized returned object into json and directly pass it as 
+	responsebody
+	
 	@RequestMapping(value ="/profile",method=RequestMethod.POST,consumes = "application/json")
 	@ResponseBody
 	public String createUserProfile(@RequestBody RequestParameters requestParameters){
@@ -47,7 +50,7 @@ public class ProfileController {
 		return responseMessage;
 	}
 
-
+	
 	@RequestMapping(value ="/profile/{userId}",method=RequestMethod.DELETE)
 	public String deleteUserProfile(@PathVariable("userId")String userId){
 
